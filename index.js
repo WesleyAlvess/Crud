@@ -17,6 +17,7 @@ app.use('/', router)
 
 
 // Inicia o servidor
-app.listen(port, () => { 
-    console.log(`Servidor rodando na porta ${port}`);
+app.listen({ 
+    host: '0.0.0.0',
+    port: process.env.PORT ?? 3333,
 })
